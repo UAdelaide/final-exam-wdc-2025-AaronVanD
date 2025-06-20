@@ -18,7 +18,11 @@ let db = mysql.createConnection({
 });
 
 router.get('/api/dogs', async (req, res) =>{
-  
+  try{
+
+  } catch (err) {
+
+  }
 
 })
 
