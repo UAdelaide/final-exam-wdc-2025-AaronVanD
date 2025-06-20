@@ -17,7 +17,7 @@ let db = mysql.createConnection({
   database: 'DogWalkService'
 });
 
-router.get
+router.get('/api/dogs')
 
 
 module.exports = router;
