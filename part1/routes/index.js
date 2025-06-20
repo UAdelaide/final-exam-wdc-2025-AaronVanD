@@ -19,7 +19,7 @@ let db = mysql.createConnection({
 
 router.get('/api/dogs', async (req, res) =>{
   try{
-
+    
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to get dogs' });
@@ -36,7 +36,7 @@ router.get('/api/walkrequests/open', async (req, res) => {
   }
 });
 
-router.get('/api/walkrequests/open', async (req, res) => {
+router.get('/api/walkers/summary', async (req, res) => {
   try{
 
   } catch (err) {
