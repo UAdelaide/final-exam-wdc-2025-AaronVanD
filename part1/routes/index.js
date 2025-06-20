@@ -17,9 +17,9 @@ const db = mysql.createConnection({
 router.get('/dogs', async(req,res) => {
 const[rows]= (await db).query(`
 
-  `)
+  `);
   res.json(rows);
-})
+});
 
 module.exports = router;
 // module.exports = db;
