@@ -21,7 +21,8 @@ router.get('/api/dogs', async (req, res) =>{
   try{
 
   } catch (err) {
-
+    console.error(err);
+    res.status(500).json()
   }
 
 })
