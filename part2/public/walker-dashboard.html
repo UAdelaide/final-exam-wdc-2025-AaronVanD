@@ -85,6 +85,16 @@
           error,
           applyToWalk
         };
+      },
+      methods: {
+        logout() {
+          fetch('api/users/logout', {
+            method: 'POST',
+            credentials: 'include'
+          }).then(() => {
+            window.location.href = '/';
+          })
+        }
       }
     }).mount('#app');
   </script>
