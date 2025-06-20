@@ -32,7 +32,7 @@ router.get('/api/walkrequests/open', async (req, res) => {
 
   } catch (err) {
     console.error(err);
-    
+    res.status(500).json({ error: 'Failed to get walk requests'});
   }
 });
 
