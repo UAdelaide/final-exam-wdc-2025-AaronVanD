@@ -19,7 +19,7 @@ let db = mysql.createConnection({
 
 router.get('/api/dogs', async (req, res) => {
   try{
-    const [rows] = (await db).execute(`
+    const [rows] = await db.execute(`
       SELECT  d.name AS dog_name, d.size, d.username AS owner_username
       FROM Dogs d
       JOIN Users u ON d.owner_id = u.user_id
@@ -33,7 +33,7 @@ router.get('/api/dogs', async (req, res) => {
 
 router.get('/api/walkrequests/open', async (req, res) => {
   try{
-    const [rows] = (await db).execute(`
+    const [rows] = await db.execute(`
       SELECT
         wr.request_id,
         d.name AS dog_name,
@@ -54,7 +54,7 @@ router.get('/api/walkrequests/open', async (req, res) => {
 
 router.get('/api/walkers/summary', async (req, res) => {
   try{
-    const [rows] = (await db).execute(`
+    const [rows] = await db.execute(`
 
       `);
   } catch (err) {
