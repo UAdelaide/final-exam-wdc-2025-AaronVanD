@@ -133,7 +133,9 @@
           fetch('api/users/logout', {
             method: 'POST',
             credentials: 'include'
-          }).then()
+          }).then(() => {
+            window.locaiton.href = '/';
+          })
         }
       }
     }).mount('#app');
