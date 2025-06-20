@@ -77,9 +77,3 @@ VALUES
 ((SELECT dog_id FROM Dogs WHERE name='Rocky'), '2025-06-11 10:00:00', 60, 'Mountain Trail', 'open'),
 ((SELECT dog_id FROM Dogs WHERE name='Coco'), '2025-06-12 07:45:00', 20, 'City Square', 'cancelled'),
 ((SELECT dog_id FROM Dogs WHERE name='Milo'), '2025-06-13 14:15:00', 40, 'Riverside Path', 'completed');
-
-
-
-
-
-
