@@ -14,6 +14,7 @@ const db = mysql.createConnection({
   database: 'DogWalkService'
 });
 
+router.get('/')
 
 module.exports = router;
 // module.exports = db;
