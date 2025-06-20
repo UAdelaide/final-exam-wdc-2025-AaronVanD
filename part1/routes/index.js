@@ -38,7 +38,8 @@ router.get('/api/walkrequests/open', async (req, res) => {
         wr.request_id
         d.name AS dog_name
         wr.requested_time
-        FROM WalkRequests wr
+        
+      FROM WalkRequests wr
       `);
   } catch (err) {
     console.error(err);
