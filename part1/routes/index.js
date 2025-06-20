@@ -57,7 +57,8 @@ router.get('/api/walkrequests/open', async (req, res) => {
 router.get('/api/walkers/summary', async (req, res) => {
   try{
     const [rows] = await db.execute(`
-
+      SELECT
+        u.username
       `);
   } catch (err) {
     console.error(err);
