@@ -130,7 +130,10 @@
       },
       methods: {
         logout() {
-          fetch('api/users/logout', {})
+          fetch('api/users/logout', {
+            method: 'POST',
+            credentials: 'include'
+          }).then()
         }
       }
     }).mount('#app');
