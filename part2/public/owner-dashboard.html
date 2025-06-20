@@ -129,7 +129,9 @@
         };
       },
       methods: {
-        
+        logout() {
+          fetch('api/users/logout', {})
+        }
       }
     }).mount('#app');
   </script>
