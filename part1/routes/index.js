@@ -66,7 +66,7 @@ router.get('/api/walkers/summary', async (req, res) => {
           FROM WalkRequests wr
           JOIN WalkRatings rr ON wr.request_id = rr.request_id
           WHERE rr.walker_id = u.user_id
-        )
+        ) AS completed_walks
         FROM Users u
       `);
   } catch (err) {
