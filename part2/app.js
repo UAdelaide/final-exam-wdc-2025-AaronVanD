@@ -19,6 +19,7 @@ app.use(session({
         secure: false
     }
 }));
+
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
