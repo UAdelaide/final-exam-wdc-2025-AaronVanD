@@ -55,11 +55,8 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/ap', (req, res) => {
-  req.session.destroy(() => {
-    res.clearCookie('connect.sid');
-    res.json({ message: 'Logged out' });
-  });
+router.get('/api/dogs/mine', (req, res) => {
+  if(!req.session.user)
 });
 router.post('/logout', (req, res) => {
   req.session.destroy(() => {
