@@ -27,12 +27,11 @@
             };
         },
         mounted() {
-            fetch('/api/dogs'
+            fetch('/api/dogs')
                 .then(response => response.json())
                 .then(data => {
                     this.dogs = data;
                 })
-            )
         }
     }).mount('#app');
 
