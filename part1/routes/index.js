@@ -19,7 +19,9 @@ let db = mysql.createConnection({
 
 router.get('/api/dogs', async (req, res) =>{
   try{
-    
+    const [rows] = (await db).execute(`
+
+      `)
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to get dogs' });
