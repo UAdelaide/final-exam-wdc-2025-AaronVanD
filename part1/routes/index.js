@@ -14,7 +14,10 @@ const db = mysql.createConnection({
   database: 'DogWalkService'
 });
 
-router.get('/dogs', async(req,res))
+router.get('/dogs', async(req,res){
+const(roqs)= await
+
+})
 
 module.exports = router;
 // module.exports = db;
