@@ -35,7 +35,7 @@ router.get('/api/walkrequests/open', async (req, res) => {
   try{
     const [rows] = (await db).execute(`
       SELECT
-        wr.request
+        wr.request_id
       `);
   } catch (err) {
     console.error(err);
