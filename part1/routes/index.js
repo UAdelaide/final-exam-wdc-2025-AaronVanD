@@ -20,7 +20,9 @@ let db = mysql.createConnection({
 router.get('/api/dogs', async (req, res) =>{
   try{
     const [rows] = (await db).execute(`
-      SELECT  d.name AS dog_name, d.size, d.username AS
+      SELECT  d.name AS dog_name, d.size, d.username AS owner_username
+      FROM Dogs d
+      JOIN Users u
       `)
   } catch (err) {
     console.error(err);
