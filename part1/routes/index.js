@@ -15,7 +15,7 @@ const db = mysql.createConnection({
 });
 
 router.get('/dogs', async(req,res){
-const(roqs)= await
+const[rows]= (await db).query
 
 })
 
