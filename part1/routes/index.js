@@ -22,8 +22,8 @@ router.get('/api/dogs', async (req, res) =>{
     const [rows] = (await db).execute(`
       SELECT  d.name AS dog_name, d.size, d.username AS owner_username
       FROM Dogs d
-      JOIN Users u
-      `)
+      JOIN Users u ON d.owner_id = u.user_id
+      `);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to get dogs' });
