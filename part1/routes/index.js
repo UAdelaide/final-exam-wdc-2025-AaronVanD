@@ -17,7 +17,10 @@ let db = mysql.createConnection({
   database: 'DogWalkService'
 });
 
-router.get('/api/dogs')
+router.get('/api/dogs', async (req, res) =>{
+  
+
+})
 
 
 module.exports = router;
