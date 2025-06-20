@@ -38,6 +38,8 @@
             body: JSON.stringify({email: this.email, password: this.password}),
             credentials: 'same-origin'
           });
+          const data = await res.json();
+
         }
       }
     }).mount('#app');
