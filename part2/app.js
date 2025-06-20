@@ -1,17 +1,15 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
-const session = require('express-session');
-const logger = require('morgan');
+
 
 const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.urlencoded({ extended: true }));
 
+const session = require('express-session');
 app.use(session({
     secret: 'key',
     resave: false,
