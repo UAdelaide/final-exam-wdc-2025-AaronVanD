@@ -58,7 +58,8 @@ router.get('/api/walkers/summary', async (req, res) => {
   try{
     const [rows] = await db.execute(`
       SELECT
-        u.username
+        u.username AS walker_username,
+        COUNT(r.)
       `);
   } catch (err) {
     console.error(err);
