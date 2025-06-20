@@ -17,3 +17,4 @@ const db = mysql.createConnection({
 
 
 module.exports = router;
+module.exports = db;
