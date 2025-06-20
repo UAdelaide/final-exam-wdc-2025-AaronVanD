@@ -34,7 +34,8 @@ router.get('/api/dogs', async (req, res) => {
 router.get('/api/walkrequests/open', async (req, res) => {
   try{
     const [rows] = (await db).execute(`
-      
+      SELECT
+        wr.request
       `);
   } catch (err) {
     console.error(err);
