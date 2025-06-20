@@ -72,6 +72,7 @@ router.get('/api/walkers/summary', async (req, res) => {
         WHERE u.role = 'walker'
         GROUP BY u.usernames
       `);
+    res.json(rows);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to get walk requests' });
