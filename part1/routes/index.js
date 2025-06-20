@@ -44,7 +44,9 @@ router.get('/api/walkrequests/open', async (req, res) => {
 
 router.get('/api/walkers/summary', async (req, res) => {
   try{
-    const [rows] = await
+    const [rows] = (await db).execute(`
+
+      `);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Failed to get walk requests' });
