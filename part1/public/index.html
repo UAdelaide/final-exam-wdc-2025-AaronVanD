@@ -23,7 +23,8 @@
         },
         mounted() {
             fetch('/api/dogs'
-                
+                .then(response => response.json())
+                .then(data =>)
             )
         }
     })
