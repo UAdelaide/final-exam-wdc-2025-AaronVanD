@@ -67,7 +67,9 @@ VALUES
 ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')),
 ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123')),
 ('Rocky', 'large', (SELECT user_id FROM Users WHERE username = 'eve123')),
-('Coco', 'small', (SELECT user_id FROM Users WHERE username = 'sliv123')),
+('Coco', 'small', (SELECT user_id FROM Users WHERE username = 'alice123')),
+('Milo', 'medium', (SELECT user_id FROM Users WHERE username = 'carol123')),
+
 
 
 
