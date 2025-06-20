@@ -7,7 +7,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-const db = mysql.createConnection({
+
+
+let db; = mysql.createConnection({
   socketPath: '/var/run/mysqld/mysqld.sock',
   host: '127.0.0.1', // use IP to avoid Unix socket
   user: 'root',
