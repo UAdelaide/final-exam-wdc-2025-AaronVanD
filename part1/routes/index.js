@@ -37,6 +37,7 @@ router.get('/api/walkrequests/open', async (req, res) => {
       SELECT
         wr.request_id
         d.name AS dog_name
+        wr.
       `);
   } catch (err) {
     console.error(err);
