@@ -22,10 +22,10 @@ router.get('/api/dogs', async (req, res) =>{
 
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Failed to get dogs'})
+    res.status(500).json({ error: 'Failed to get dogs' });
   }
 
-})
+});
 
 
 module.exports = router;
