@@ -39,7 +39,9 @@
             credentials: 'same-origin'
           });
           const data = await res.json();
-
+          if (data.user.role === 'owner'){
+            
+          }
         }
       }
     }).mount('#app');
