@@ -60,8 +60,10 @@ router.get('/api/dogs/mine', (req, res) => {
     return res.status(401).json({ error: 'Not logged in' });
   }
   try {
-    const []
-  }rows
+    const [rows] = await db.query(`
+
+      `)
+  }
 });
 router.post('/logout', (req, res) => {
   req.session.destroy(() => {
