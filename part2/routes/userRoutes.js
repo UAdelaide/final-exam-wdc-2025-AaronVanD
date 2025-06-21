@@ -56,8 +56,8 @@ router.post('/login', async (req, res) => {
 });
 
 router.get('/api/dogs/mine', (req, res) => {
-  if(!req.session.user) { // if user is logged in
-    
+  if(!req.session.user) { // if user is not logged in
+    return res.status(401).json()
   }
 });
 router.post('/logout', (req, res) => {
