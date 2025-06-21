@@ -63,7 +63,9 @@ router.get('/api/dogs/mine', async (req, res) => {
     const [rows] = await db.query(`
 
       `)
-  } catch
+  } catch (err){
+    res.status(500).json()
+  }
 });
 router.post('/logout', (req, res) => {
   req.session.destroy(() => {
