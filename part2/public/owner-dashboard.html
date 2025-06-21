@@ -85,8 +85,10 @@
         const myDogs = ref([]);
 
         async function loadMyDogs(){
-          const res = await fetch('api/dogs/mine', { credentials: ''})
+          const res = await fetch('api/dogs/mine', { credentials: 'include' });
+          myDogs.value = await res.json();
         }
+        
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
