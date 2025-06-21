@@ -88,7 +88,7 @@
           const res = await fetch('api/dogs/mine', { credentials: 'include' });
           myDogs.value = await res.json();
         }
-        
+
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
@@ -126,6 +126,7 @@
 
         onMounted(() => {
           loadWalks();
+          loadmyDogs();
         });
 
         return {
