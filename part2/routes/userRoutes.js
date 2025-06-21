@@ -61,10 +61,10 @@ router.get('/api/dogs/mine', async (req, res) => {
   }
   try {
     const [rows] = await db.query(`
-
-      `)
+      
+      `);
   } catch (err){
-    res.status(500).json()
+    res.status(500).json({ error: 'Failed to get your dogs' });
   }
 });
 router.post('/logout', (req, res) => {
