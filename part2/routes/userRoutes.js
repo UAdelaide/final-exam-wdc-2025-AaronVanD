@@ -57,8 +57,11 @@ router.post('/login', async (req, res) => {
 
 router.get('/api/dogs/mine', (req, res) => {
   if(!req.session.user) { // if user is not logged in
-    return res.status(401).json()
+    return res.status(401).json({ error: 'Not logged in' });
   }
+  try {
+    const []
+  }rows
 });
 router.post('/logout', (req, res) => {
   req.session.destroy(() => {
