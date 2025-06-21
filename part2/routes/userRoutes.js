@@ -55,7 +55,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/api/dogs/mine', (req, res) => {
+router.get('/api/dogs/mine', async (req, res) => {
   if(!req.session.user) { // if user is not logged in
     return res.status(401).json({ error: 'Not logged in' });
   }
@@ -63,7 +63,7 @@ router.get('/api/dogs/mine', (req, res) => {
     const [rows] = await db.query(`
 
       `)
-  }
+  } catch
 });
 router.post('/logout', (req, res) => {
   req.session.destroy(() => {
